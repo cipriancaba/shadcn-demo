@@ -2,68 +2,162 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+  --background: 210, 40%, 96%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+
+  --brand: 225.7 31.8% 25.9%;
+  --brand-foreground: 210 40% 98%;
+
+  --brand-secondary: 188, 99%, 41%;
+  --brand-secondary-foreground: 188, 99%, 41%;
+
+  --brand-action: 221, 83%, 53%;
+  --brand-action-border: 212, 96%, 78%;
+
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221, 83%, 53%;
+
+  --radius: 0.5rem;
+
+  --typography-h1-font-size: 48px;
+  --typography-h1-font-weight: 300;
+  --typography-h1-line-height: 62px;
+  --typography-h1-letter-spacing: -0.02em;
+
+  --typography-h2-font-size: 30px;
+  --typography-h2-font-weight: 400;
+  --typography-h2-line-height: 38px;
+  --typography-h2-letter-spacing: -0.02em;
+
+  --typography-h3-font-size: 24px;
+  --typography-h3-font-weight: 400;
+  --typography-h3-line-height: 32px;
+  --typography-h3-letter-spacing: -0.012em;
+
+  --typography-h4-font-size: 18px;
+  --typography-h4-font-weight: 500;
+  --typography-h4-line-height: 25px;
+  --typography-h4-letter-spacing: -0.01em;
+
+  --typography-large-font-size: 18px;
+  --typography-large-font-weight: 400;
+  --typography-large-line-height: 18px;
+
+  --typography-p-font-size: 16px;
+  --typography-p-font-weight: 400;
+  --typography-p-line-height: 24px;
+
+  --typography-pe-font-size: 16px;
+  --typography-pe-font-weight: 500;
+  --typography-pe-line-height: 24px;
+
+  --typography-blockquote-font-size: 16px;
+  --typography-blockquote-font-weight: 400;
+  --typography-blockquote-line-height: 24px;
+  --typography-blockquote-font-style: italic;
+  --typography-blockquote-letter-spacing: 0em;
+
+  --typography-lead-font-size: 20px;
+  --typography-lead-font-weight: 400;
+  --typography-lead-line-height: 28px;
+  --typography-lead-letter-spacing: 0em;
+
+  --typography-small-font-size: 14px;
+  --typography-small-font-weight: 400;
+  --typography-small-line-height: 14px;
+
+  --typography-subtle-font-size: 14px;
+  --typography-subtle-font-weight: 400;
+  --typography-subtle-line-height: 20px;
+  --typography-subtle-color: #64748b;
+
+  --typography-detail-font-size: 12px;
+  --typography-detail-font-weight: 400;
+  --typography-detail-line-height: 20px;
+}
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --brand: 225.7 31.8% 25.9%;
+  --brand-foreground: 222.2 47.4% 11.2%;
+
+  --brand-secondary: 188, 99%, 41%;
+  --brand-secondary-foreground: 188, 99%, 41%;
+
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 212.7 26.8% 83.9%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
